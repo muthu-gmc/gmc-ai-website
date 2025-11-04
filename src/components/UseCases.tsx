@@ -2,12 +2,14 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
 import { Heart, DollarSign, ShoppingCart, Factory } from "lucide-react";
+import { platform } from "os";
 
 const useCases = [
   {
-    icon: Heart,
-    title: "Healthcare",
-    description: "Predictive diagnostics and automated patient documentation.",
+    icon: DollarSign,
+    title: "Accelerating Financial Operations with Data Modernisation",
+    description: "Improvement in Development Velocity:90%,Pipelines Onboarded:40%",
+    platform: "Data Lakehouse Architecture,CI/CD for DataOps,Metadata-driven pipeline orchestration,Centralised governance and access control"
   },
   {
     icon: DollarSign,
@@ -65,7 +67,10 @@ export function UseCases() {
                 <useCase.icon className="w-7 h-7 text-[#00F000]" />
               </div>
               <h3 className="mb-3 text-[#111111]">{useCase.title}</h3>
-              <p className="text-gray-600">{useCase.description}</p>
+              {/* <p className="text-gray-600">{useCase.description}</p> */}
+              {useCase.description.split(",").map((item, i) => (
+                <li key={i}>{item.trim()}</li>
+              ))}
             </motion.div>
           ))}
         </div>

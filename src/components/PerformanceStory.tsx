@@ -1,17 +1,33 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
+import { BarChart3, Database, Brain, LineChart } from "lucide-react"; // Lucide icons
 
 export function PerformanceStory() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const layers = [
-    { name: "UI Layer", description: "Generative, adaptive interfaces" },
-    { name: "Business Logic", description: "Context-aware decision making" },
-    { name: "Data Layer", description: "Predictive data management" },
-    { name: "Integration", description: "Intelligent API orchestration" },
-    { name: "DevOps", description: "AI-driven automation" },
+    { 
+      icon: BarChart3,
+      name: "STRATEGY AND ADVISORY", 
+      description: "Analytics Roadmap, Data Strategy, Platform Strategy" 
+    },
+    { 
+      icon: Database,
+      name: "ENGINEER YOUR DATA", 
+      description: "Data Modernization, Data Foundation, Data Operations" 
+    },
+    { 
+      icon: Brain,
+      name: "DIFFERENTIATE WITH AI/ML", 
+      description: "Data Science, AI Engineering, ML Products & Platforms" 
+    },
+    { 
+      icon: LineChart,
+      name: "OPERATIONALIZE INSIGHTS", 
+      description: "Experience Consulting, Application Engineering, Business Intelligence, ML Ops" 
+    },
   ];
 
   return (
@@ -23,8 +39,10 @@ export function PerformanceStory() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          Beyond Chatbots —<br />
-          <span className="text-[#00F000]">Into the Core of Business Intelligence</span>
+          <br />
+          <span className="text-[#00F000]">
+            Transform your enterprise data into intelligent action
+          </span>
         </motion.h2>
 
         <motion.p
@@ -33,26 +51,34 @@ export function PerformanceStory() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Deep AI integration transforms enterprise software from static systems into intelligent ecosystems.
+          Deep AI integration transforms enterprise software from static systems
+          into intelligent ecosystems.
         </motion.p>
 
-        {/* Layered architecture diagram */}
-        <div className="max-w-2xl mx-auto space-y-4">
+        {/* Grid of vertical cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {layers.map((layer, index) => (
             <motion.div
               key={layer.name}
-              className="relative p-6 bg-gradient-to-r from-gray-50 to-white border-l-4 border-[#00F000] rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
-              initial={{ opacity: 0, x: -50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 relative group"
+              initial={{ opacity: 0, y: 40 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
             >
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-[#111111] mb-1">{layer.name}</h3>
-                  <p className="text-gray-600">{layer.description}</p>
-                </div>
-                <div className="w-3 h-3 bg-[#00F000] rounded-full shadow-[0_0_10px_rgba(0,240,0,0.5)]" />
+              {/* Icon container */}
+              <div className="w-14 h-14 mb-6 bg-[#00F000]/10 rounded-xl flex items-center justify-center group-hover:bg-[#00F000]/20 transition-all duration-300">
+                <layer.icon className="w-7 h-7 text-[#00F000]" />
               </div>
+
+              <h3 className="text-[#111111] font-semibold text-lg mb-2">
+                {layer.name}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {layer.description.split(",").map((item, i) => (
+                <li key={i}>{item.trim()}</li>
+              ))}
+              </p>
+             
             </motion.div>
           ))}
         </div>
