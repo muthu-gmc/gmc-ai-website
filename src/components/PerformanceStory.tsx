@@ -26,7 +26,7 @@ export function PerformanceStory() {
     {
       icon: LineChart,
       name: "OPERATIONALIZE INSIGHTS",
-      description: "Experience Consulting, Application Engineering, BI, ML Ops"
+      description: "Experience Consulting, Application Engineering, Business Intelligence, ML Ops"
     },
   ];
 

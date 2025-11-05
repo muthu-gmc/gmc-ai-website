@@ -67,7 +67,7 @@ export function HeroSection() {
             size="lg"
             className="bg-[#00F000] text-black hover:bg-[#00F000]/90 hover:shadow-[0_0_20px_rgba(0,240,0,0.5)] transition-all duration-300"
             onClick={() => {
-              document.getElementById("use-cases")?.scrollIntoView({ behavior: "smooth" });
+              document.getElementById("solutions")?.scrollIntoView({ behavior: "smooth" });
             }}
           >
             Explore Our Platform
