@@ -827,7 +827,7 @@ const inputClasses =
 
 const contactInfo = [
   { icon: Phone, title: "Phone Number", value: "207-8767-452" },
-  { icon: Mail, title: "Email Address", value: "support@yoursite.com" },
+  { icon: Mail, title: "Email Address", value: "support@greenmenconsulting.ai" },
   { icon: MapPin, title: "Our Location", value: "2443 Oak Ridge Omaha, QA 45065" },
 ];
 
