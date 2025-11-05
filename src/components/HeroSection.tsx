@@ -41,19 +41,21 @@ export function HeroSection() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-white mb-6">
-            Enhancing the Incorporation of AI<br />
-            <span className="text-[#00F000]">in Business Applications</span>
+           <span className = "text-[#00F000]">We provide certainty by solving your toughest challenges<br /></span> 
+            {/* <span className="text-[#00F000]">in Business Applications</span> */}
+            <span> Problem-solving is not just about finding answers, but also about asking more questions until we know what will determine success and how to get there. Our focus is on helping you drive the right course of action, dispel ambiguity, and move ahead with confidence by bringing the best of AI and analytics together.</span>
           </h1>
         </motion.div>
 
-        <motion.p
+        {/* <motion.p
           className="text-gray-300 text-xl max-w-3xl mx-auto mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           We embed AI into the heart of enterprise systems — enabling them to think, learn, and adapt, not just automate.
-        </motion.p>
+        </motion.p> */}
+
 
         <motion.div
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"

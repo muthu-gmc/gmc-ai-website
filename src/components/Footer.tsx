@@ -3,9 +3,9 @@ import { Twitter, Linkedin, Github, Mail } from "lucide-react";
 import logo from "figma:asset/10a6fb56a4a37d4ba1494a8e5fb47dcbdb91dac7.png";
 
 const links = [
-  { name: "About", href: "#" },
-  { name: "Platform", href: "#platform" },
-  { name: "Use-cases", href: "#use-cases" },
+  { name: "About Us", href: "#aboutUs" },
+  { name: "Solutions", href: "#solutions" },
+  // { name: "Use-cases", href: "#use-cases" },
   { name: "Contact", href: "#contact" },
 ];
 

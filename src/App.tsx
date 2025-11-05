@@ -8,9 +8,9 @@ import { StrategicRoadmap } from "./components/StrategicRoadmap";
 import { UseCases } from "./components/UseCases";
 import { Challenges } from "./components/Challenges";
 import { CTASection } from "./components/CTASection";
-import { ContactPage } from "./components/Contact";
 import { Footer } from "./components/Footer";
-
+import { ContactPage } from "./components/Contact";
+import { AboutUs } from "./components/AboutUs";
 export default function App() {
   return (
     <div className="min-h-screen">
@@ -21,10 +21,11 @@ export default function App() {
       <Impact />
       <ImplementationStrategy />
       <StrategicRoadmap />
-      <UseCases />
+      {/* <UseCases /> */}
       <Challenges />
       <CTASection />
       <ContactPage />
+      <AboutUs />
       <Footer />
     </div>
   );
