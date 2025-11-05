@@ -24,7 +24,7 @@ const principlesData = [
 
 export function AboutUs() {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-[#111111] via-[#0a0a0a] to-[#000000] text-gray-200 pt-20 overflow-hidden">
+    <div id='aboutUs' className="relative min-h-screen bg-gradient-to-br from-[#111111] via-[#0a0a0a] to-[#000000] text-gray-200 pt-20 overflow-hidden">
       {/* 🔹 Animated Grid Background */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <motion.div

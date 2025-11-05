@@ -22,7 +22,7 @@ export function Header() {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#platform" className="text-gray-400 hover:text-[#00F000] transition-colors duration-300">
+            <a href="#aboutUs" className="text-gray-400 hover:text-[#00F000] transition-colors duration-300">
               About us
             </a>
             <a href="#solutions" className="text-gray-400 hover:text-[#00F000] transition-colors duration-300">

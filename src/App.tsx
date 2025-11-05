@@ -21,7 +21,7 @@ export default function App() {
       <Impact />
       <ImplementationStrategy />
       <StrategicRoadmap />
-      <UseCases />
+      {/* <UseCases /> */}
       <Challenges />
       <CTASection />
       <ContactPage />

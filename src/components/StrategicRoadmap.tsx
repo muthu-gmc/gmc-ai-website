@@ -53,13 +53,13 @@ export function StrategicRoadmap() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.h2
-          className="text-center mb-6 text-white"
+          className="text-center mb-6 text-[#00F000]"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          Strategic<br />
-          <span className="text-[#00F000]">Roadmap</span>
+          Solution<br />
+
         </motion.h2>
 
         <motion.p
@@ -68,7 +68,7 @@ export function StrategicRoadmap() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          A proven path from initial pilots to enterprise-wide AI transformation.
+          Empowering businesses through intelligent, adaptive technology.
         </motion.p>
 
         {/* Vertical Cards Grid */}

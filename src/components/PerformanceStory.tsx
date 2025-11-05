@@ -8,25 +8,25 @@ export function PerformanceStory() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const layers = [
-    { 
+    {
       icon: BarChart3,
-      name: "STRATEGY AND ADVISORY", 
-      description: "Analytics Roadmap, Data Strategy, Platform Strategy" 
+      name: "STRATEGY AND ADVISORY",
+      description: "Analytics Roadmap, Data Strategy, Platform Strategy"
     },
-    { 
+    {
       icon: Database,
-      name: "ENGINEER YOUR DATA", 
-      description: "Data Modernization, Data Foundation, Data Operations" 
+      name: "ENGINEER YOUR DATA",
+      description: "Data Modernization, Data Foundation, Data Operations"
     },
-    { 
+    {
       icon: Brain,
-      name: "DIFFERENTIATE WITH AI/ML", 
-      description: "Data Science, AI Engineering, ML Products & Platforms" 
+      name: "DIFFERENTIATE WITH AI/ML",
+      description: "Data Science, AI Engineering, ML Products & Platforms"
     },
-    { 
+    {
       icon: LineChart,
-      name: "OPERATIONALIZE INSIGHTS", 
-      description: "Experience Consulting, Application Engineering, Business Intelligence, ML Ops" 
+      name: "OPERATIONALIZE INSIGHTS",
+      description: "Experience Consulting, Application Engineering, BI, ML Ops"
     },
   ];
 
@@ -70,15 +70,15 @@ export function PerformanceStory() {
                 <layer.icon className="w-7 h-7 text-[#00F000]" />
               </div>
 
-              <h3 className="text-[#111111] font-semibold text-lg mb-2">
+              <h1 className="text-[#111111] font-bold text-lg mb-2 text-center">
                 {layer.name}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
+              </h1>
+              <ul className="list-none text-gray-600 leading-relaxed text-center">
                 {layer.description.split(",").map((item, i) => (
-                <li key={i}>{item.trim()}</li>
-              ))}
-              </p>
-             
+                  <li key={i}>{item.trim()}</li>
+                ))}
+              </ul>
+
             </motion.div>
           ))}
         </div>

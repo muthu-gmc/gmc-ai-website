@@ -2,13 +2,12 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
 import { Heart, DollarSign, ShoppingCart, Factory } from "lucide-react";
-import { platform } from "os";
 
 const useCases = [
   {
     icon: DollarSign,
     title: "Accelerating Financial Operations with Data Modernisation",
-    description: "Improvement in Development Velocity:90%,Pipelines Onboarded:40%",
+    description: "Development Velocity:90%,Pipelines Onboarded:40%",
     platform: "Data Lakehouse Architecture,CI/CD for DataOps,Metadata-driven pipeline orchestration,Centralised governance and access control"
   },
   {
@@ -66,11 +65,17 @@ export function UseCases() {
               <div className="w-14 h-14 mb-6 bg-[#00F000]/10 rounded-xl flex items-center justify-center group-hover:bg-[#00F000]/20 transition-all duration-300">
                 <useCase.icon className="w-7 h-7 text-[#00F000]" />
               </div>
-              <h3 className="mb-3 text-[#111111]">{useCase.title}</h3>
+              <h3 style={{ fontWeight: "semi-bold" }} className="mb-3 text-[#111111] font-bold">{useCase.title}</h3>
               {/* <p className="text-gray-600">{useCase.description}</p> */}
-              {useCase.description.split(",").map((item, i) => (
+              {/* {useCase.description.split(",").map((item, i) => (
                 <li key={i}>{item.trim()}</li>
-              ))}
+              ))} */}
+               <ul className="list-none text-gray-600 leading-relaxed">
+                {useCase.description.split(",").map((item, i) => (
+                  <li key={i}>{item.trim()}</li>
+                ))}
+              </ul>
+
             </motion.div>
           ))}
         </div>

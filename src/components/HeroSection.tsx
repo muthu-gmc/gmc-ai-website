@@ -70,7 +70,7 @@ export function HeroSection() {
               document.getElementById("use-cases")?.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            See How its works?
+            Explore Our Platform
           </Button>
           <Button
             size="lg"
@@ -80,7 +80,7 @@ export function HeroSection() {
               document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            Find Career With us
+            Request a Demo
           </Button>
         </motion.div>
 
