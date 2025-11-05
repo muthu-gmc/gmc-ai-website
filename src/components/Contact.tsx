@@ -710,10 +710,120 @@
 // }
 
 
-import { Phone, Mail, MapPin, Bold } from "lucide-react";
+// import { Phone, Mail, MapPin, Bold } from "lucide-react";
+
+// const inputClasses =
+//   "w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 outline-none";
+
+// const contactInfo = [
+//   { icon: Phone, title: "Phone Number", value: "207-8767-452" },
+//   { icon: Mail, title: "Email Address", value: "support@yoursite.com" },
+//   { icon: MapPin, title: "Our Location", value: "2443 Oak Ridge Omaha, QA 45065" },
+// ];
+
+// function InputField({
+//   type = "text",
+//   placeholder,
+// }: {
+//   type?: string;
+//   placeholder: string;
+// }) {
+//   return <input type={type} placeholder={placeholder} className={inputClasses} />;
+// }
+
+// function InfoCard({
+//   Icon,
+//   title,
+//   value,
+// }: {
+//   Icon: any;
+//   title: string;
+//   value: string;
+// }) {
+//   return (
+//     <div className="relative flex items-center justify-between bg-white rounded-2xl shadow-sm border border-gray-100 p-6 transition hover:shadow-md overflow-visible">
+//       {/* Glowing left border */}
+//       {/* <div className="absolute left-0 top-1 bottom-0 w-[4px] bg-[#00F000] rounded-l-2xl shadow-[0_0_15px_#00F000] z-20" /> */}
+
+//       {/* Content */}
+//       <div className="flex items-center gap-4 ml-5">
+//         <Icon className="text-[#00F000] w-6 h-6" />
+//         <div>
+//           <p className="font-semibold text-gray-900">{title}</p>
+//           <p className="text-gray-600">{value}</p>
+//         </div>
+//       </div>
+
+//       {/* Right glowing dot */}
+//       <div className="w-3 h-3 rounded-full bg-[#00F000] shadow-[0_0_8px_#00F000]" />
+//     </div>
+//   );
+// }
+
+// export function ContactPage() {
+//   return (
+//     <section
+//       id="contact"
+//       className="bg-white min-h-screen flex flex-col items-center py-24 px-6 md:px-20"
+//     >
+//       {/* SECTION HEADING */}
+//       <div className="text-center mb-12">
+//         <h1 className="text-4xl font-bold text-gray-900 mb-2 text-[#00F000]" style={{ fontWeight: "bold" }}>Contact Us</h1>
+//       </div>
+
+//       <div
+//         className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12"
+//         style={{ gap: "40px" }}
+//       >
+//         {/* LEFT: Get In Touch Form */}
+//         <div className="flex flex-col justify-center">
+//           <h1 className="text-3xl font-bold mb-5 text-gray-900" style={{ fontWeight: "bold" }}>Get In Touch</h1>
+//           <p className="text-gray-500 mb-8">
+//             Please use the form below to send us a message. We look forward
+//             to hearing from you and will get back to you shortly.
+//           </p>
+
+//           <div className="flex justify-left w-full gap-5" >
+//             <form className="flex flex-col gap-5 w-full max-w-md" style={{ gap: "10px" }}>
+//               <div className="flex gap-4">
+//                 <InputField placeholder="First Name" />
+//                 <InputField placeholder="Last Name" />
+//               </div>
+
+//               <InputField type="email" placeholder="Email" />
+//               <InputField placeholder="Subject" />
+
+//               <textarea
+//                 rows={3}
+//                 placeholder="Type Here..."
+//                 className={inputClasses}
+//               ></textarea>
+
+//               <button
+//                 type="submit"
+//                 className="bg-[#00F000] text-black font-medium px-6 py-3 rounded-lg hover:bg-[#00F000]/90 transition-colors mt-2"
+//               >
+//                 Send Now
+//               </button>
+//             </form>
+//           </div>
+//         </div>
+
+//         {/* RIGHT: Contact Details */}
+//         <div className="flex flex-col gap-6">
+//           {contactInfo.map(({ icon: Icon, title, value }) => (
+//             <InfoCard key={title} Icon={Icon} title={title} value={value} />
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const inputClasses =
-  "w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 outline-none";
+  "w-full border border-[#00F000]/30 bg-transparent text-white rounded-lg px-4 py-5 text-lg focus:ring-2 focus:ring-[#00F000] outline-none placeholder-gray-400";
 
 const contactInfo = [
   { icon: Phone, title: "Phone Number", value: "207-8767-452" },
@@ -741,20 +851,14 @@ function InfoCard({
   value: string;
 }) {
   return (
-    <div className="relative flex items-center justify-between bg-white rounded-2xl shadow-sm border border-gray-100 p-6 transition hover:shadow-md overflow-visible">
-      {/* Glowing left border */}
-      {/* <div className="absolute left-0 top-1 bottom-0 w-[4px] bg-[#00F000] rounded-l-2xl shadow-[0_0_15px_#00F000] z-20" /> */}
-
-      {/* Content */}
-      <div className="flex items-center gap-4 ml-5">
+    <div className="relative flex items-center justify-between bg-black/70 rounded-2xl border border-[#00F000]/20 p-6 transition hover:shadow-[0_0_25px_rgba(0,240,0,0.25)] backdrop-blur-md">
+      <div className="flex items-center gap-4 ml-2">
         <Icon className="text-[#00F000] w-6 h-6" />
         <div>
-          <p className="font-semibold text-gray-900">{title}</p>
-          <p className="text-gray-600">{value}</p>
+          <p className="font-semibold text-[#00F000]">{title}</p>
+          <p className="text-gray-300">{value}</p>
         </div>
       </div>
-
-      {/* Right glowing dot */}
       <div className="w-3 h-3 rounded-full bg-[#00F000] shadow-[0_0_8px_#00F000]" />
     </div>
   );
@@ -764,40 +868,43 @@ export function ContactPage() {
   return (
     <section
       id="contact"
-      className="bg-white min-h-screen flex flex-col items-center py-24 px-6 md:px-20"
+      className="relative min-h-screen flex flex-col items-center py-24 px-6 md:px-20 bg-gradient-to-br from-[#111111] via-[#0a0a0a] to-[#000000] text-gray-200"
     >
+      {/* Animated grid background */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `linear-gradient(#00F000 1px, transparent 1px), linear-gradient(90deg, #00F000 1px, transparent 1px)`,
+            backgroundSize: "60px 60px",
+          }}
+        />
+      </div>
+
+      {/* Glowing orbs */}
+      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#00F000]/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-[#00F000]/10 rounded-full blur-3xl" />
       {/* SECTION HEADING */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-2 text-[#00F000]" style={{ fontWeight: "bold" }}>Contact Us</h1>
       </div>
-
-      <div
-        className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12"
-        style={{ gap: "40px" }}
-      >
-        {/* LEFT: Get In Touch Form */}
+      <div className="relative z-10 max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12">
+        {/* LEFT: Get In Touch */}
         <div className="flex flex-col justify-center">
-          <h1 className="text-3xl font-bold mb-5 text-gray-900" style={{ fontWeight: "bold" }}>Get In Touch</h1>
-          <p className="text-gray-500 mb-8">
+          <h1 className="text-4xl font-bold mb-5 text-[#00F000]">Get In Touch</h1>
+          <p className="text-gray-400 mb-8">
             Please use the form below to send us a message. We look forward
             to hearing from you and will get back to you shortly.
           </p>
-
           <div className="flex justify-left w-full gap-5" >
-            <form className="flex flex-col gap-5 w-full max-w-md" style={{ gap: "10px" }}>
+            <form className="flex flex-col gap-5 " style={{ gap: "10px" }}>
               <div className="flex gap-4">
                 <InputField placeholder="First Name" />
                 <InputField placeholder="Last Name" />
               </div>
-
               <InputField type="email" placeholder="Email" />
               <InputField placeholder="Subject" />
-
-              <textarea
-                rows={3}
-                placeholder="Type Here..."
-                className={inputClasses}
-              ></textarea>
+              <textarea rows={3} placeholder="Type Here..." className={inputClasses}></textarea>
 
               <button
                 type="submit"

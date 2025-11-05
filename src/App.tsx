@@ -24,8 +24,8 @@ export default function App() {
       {/* <UseCases /> */}
       <Challenges />
       <CTASection />
-      <ContactPage />
       <AboutUs />
+      <ContactPage />
       <Footer />
     </div>
   );
