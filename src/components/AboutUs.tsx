@@ -149,9 +149,7 @@ export function AboutUs() {
 
         {/* Principles */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold text-center text-[#00F000] mb-12 md:mb-16">
-            Our Guiding Principles
-          </h2>
+
           <div className="grid gap-8 lg:grid-cols-3">
             {principlesData.map((principle, index) => (
               <motion.div
