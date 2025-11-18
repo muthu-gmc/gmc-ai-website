@@ -5,10 +5,9 @@ import { Heart, DollarSign, ShoppingCart, Factory } from "lucide-react";
 
 const useCases = [
   {
-    icon: DollarSign,
-    title: "Accelerating Financial Operations with Data Modernisation",
-    description: "Development Velocity:90%,Pipelines Onboarded:40%",
-    platform: "Data Lakehouse Architecture,CI/CD for DataOps,Metadata-driven pipeline orchestration,Centralised governance and access control"
+    icon: Heart,
+    title: "Healthcare",
+    description: "Predictive diagnostics and automated patient documentation.",
   },
   {
     icon: DollarSign,
@@ -32,7 +31,7 @@ export function UseCases() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id='use-cases' ref={ref} className="py-24 px-6 bg-[#F5F5F5]">
+    <section ref={ref} className="py-24 px-6 bg-[#F5F5F5]">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           className="text-center mb-6 text-[#111111]"
@@ -65,17 +64,8 @@ export function UseCases() {
               <div className="w-14 h-14 mb-6 bg-[#00F000]/10 rounded-xl flex items-center justify-center group-hover:bg-[#00F000]/20 transition-all duration-300">
                 <useCase.icon className="w-7 h-7 text-[#00F000]" />
               </div>
-              <h3 style={{ fontWeight: "semi-bold" }} className="mb-3 text-[#111111] font-bold">{useCase.title}</h3>
-              {/* <p className="text-gray-600">{useCase.description}</p> */}
-              {/* {useCase.description.split(",").map((item, i) => (
-                <li key={i}>{item.trim()}</li>
-              ))} */}
-               <ul className="list-none text-gray-600 leading-relaxed">
-                {useCase.description.split(",").map((item, i) => (
-                  <li key={i}>{item.trim()}</li>
-                ))}
-              </ul>
-
+              <h3 className="mb-3 text-[#111111]">{useCase.title}</h3>
+              <p className="text-gray-600">{useCase.description}</p>
             </motion.div>
           ))}
         </div>

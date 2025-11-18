@@ -36,7 +36,7 @@ export function WhyRLMatters() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id='platform' ref={ref} className="py-24 px-6 bg-[#111111] relative overflow-hidden">
+    <section ref={ref} className="py-24 px-6 bg-[#111111] relative overflow-hidden">
       {/* Subtle geometric pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
