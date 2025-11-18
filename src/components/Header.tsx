@@ -22,16 +22,16 @@ export function Header() {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#aboutUs" className="text-gray-400 hover:text-[#00F000] transition-colors duration-300">
-              About us
+            <a href="#platform" className="text-white hover:text-[#00F000] transition-colors duration-300">
+              Platform
             </a>
-            <a href="#solutions" className="text-gray-400 hover:text-[#00F000] transition-colors duration-300">
+            <a href="#solutions" className="text-white hover:text-[#00F000] transition-colors duration-300">
               Solutions
             </a>
-            {/* <a href="#use-cases" className="text-gray-400 hover:text-[#00F000] transition-colors duration-300">
+            <a href="#use-cases" className="text-white hover:text-[#00F000] transition-colors duration-300">
               Use Cases
-            </a> */}
-            <a href="#contact" className="text-gray-400 hover:text-[#00F000] transition-colors duration-300">
+            </a>
+            <a href="#contact" className="text-white hover:text-[#00F000] transition-colors duration-300">
               Contact
             </a>
           </nav>

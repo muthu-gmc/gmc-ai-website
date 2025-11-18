@@ -1,7 +1,7 @@
 
-  # One-Page AI Analytics Website
+  # Greenmen Consulting
 
-  This is a code bundle for One-Page AI Analytics Website. The original project is available at https://www.figma.com/design/vgXBpzEUCGhQO8MU5LhfSE/One-Page-AI-Analytics-Website.
+  This is a code bundle for Greenmen Consulting. The original project is available at https://www.figma.com/design/vgXBpzEUCGhQO8MU5LhfSE/Greenmen-Consulting.
 
   ## Running the code
 

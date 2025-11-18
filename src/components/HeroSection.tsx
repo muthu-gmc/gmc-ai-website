@@ -2,8 +2,11 @@ import { motion } from "motion/react";
 import { Button } from "./ui/button";
 
 export function HeroSection() {
+  const randomPercent = () => (crypto.getRandomValues(new Uint32Array(1))[0] % 100) + "%";
+  const random = () => crypto.getRandomValues(new Uint32Array(1))[0] % 100;
+
   return (
-    <section id='about' className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#111111] via-[#0a0a0a] to-[#000000] pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#4A5565] via-[#3a424f] to-[#2a2f39] pt-20">
       {/* Animated background grid */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{
@@ -18,17 +21,17 @@ export function HeroSection() {
           key={i}
           className="absolute w-2 h-2 bg-[#00F000] rounded-full"
           style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
+            left: randomPercent(),
+            top: randomPercent(),
           }}
           animate={{
             opacity: [0.2, 0.8, 0.2],
             scale: [1, 1.5, 1],
           }}
           transition={{
-            duration: 3 + Math.random() * 2,
+            duration: 3 + random() * 2,
             repeat: Infinity,
-            delay: Math.random() * 2,
+            delay: random() * 2,
           }}
         />
       ))}
@@ -41,21 +44,19 @@ export function HeroSection() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-white mb-6">
-           <span className = "text-[#00F000]">We provide certainty by solving your toughest challenges<br /></span> 
-            {/* <span className="text-[#00F000]">in Business Applications</span> */}
-            <span> Problem-solving is not just about finding answers, but also about asking more questions until we know what will determine success and how to get there. Our focus is on helping you drive the right course of action, dispel ambiguity, and move ahead with confidence by bringing the best of AI and analytics together.</span>
+            Enhancing the Incorporation of AI<br />
+            <span className="text-[#00F000]">in Business Applications</span>
           </h1>
         </motion.div>
 
-        {/* <motion.p
+        <motion.p
           className="text-gray-300 text-xl max-w-3xl mx-auto mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           We embed AI into the heart of enterprise systems — enabling them to think, learn, and adapt, not just automate.
-        </motion.p> */}
-
+        </motion.p>
 
         <motion.div
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -63,22 +64,16 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <Button
+          <Button 
             size="lg"
-            className="bg-[#00F000] text-black hover:bg-[#00F000]/90 hover:shadow-[0_0_20px_rgba(0,240,0,0.5)] transition-all duration-300"
-            onClick={() => {
-              document.getElementById("solutions")?.scrollIntoView({ behavior: "smooth" });
-            }}
+            className="bg-[#00F000] text-[#4A5565] hover:bg-[#00F000]/90 hover:shadow-[0_0_20px_rgba(0,240,0,0.5)] transition-all duration-300"
           >
             Explore Our Platform
           </Button>
-          <Button
+          <Button 
             size="lg"
             variant="outline"
-            className="border-white text-black hover:bg-white hover:shadow-[0_0_20px_rgba(0,240,0,0.5)] transition-all duration-300"
-           onClick={() => {
-              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-            }}
+            className="border-white text-white hover:bg-white hover:text-[#4A5565] transition-all duration-300"
           >
             Request a Demo
           </Button>

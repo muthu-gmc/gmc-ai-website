@@ -8,7 +8,7 @@ export function CTASection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="relative py-32 px-6 bg-gradient-to-br from-[#111111] via-[#0a0a0a] to-[#000000] overflow-hidden">
+    <section ref={ref} className="relative py-32 px-6 bg-gradient-to-br from-[#4A5565] via-[#3a424f] to-[#2a2f39] overflow-hidden">
       {/* Animated grid lines */}
       <div className="absolute inset-0 opacity-20">
         <motion.div
@@ -59,10 +59,7 @@ export function CTASection() {
         >
           <Button 
             size="lg"
-            className="bg-[#00F000] text-black hover:bg-[#00F000]/90 hover:shadow-[0_0_30px_rgba(0,240,0,0.6)] transition-all duration-300 text-lg px-8 py-6"
-            onClick={() => {
-              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-            }}
+            className="bg-[#00F000] text-[#4A5565] hover:bg-[#00F000]/90 hover:shadow-[0_0_30px_rgba(0,240,0,0.6)] transition-all duration-300 text-lg px-8 py-6"
           >
             Get Started Today
           </Button>
