@@ -109,7 +109,7 @@ export function GlobalHeader() {
               </a>
 
               {/* Resources Dropdown */}
-              <div className="relative">
+              {/* <div className="relative">
                 <button
                   className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#4A5565] rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-1"
                   onClick={(e) => {
@@ -144,7 +144,7 @@ export function GlobalHeader() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </div>
+              </div> */}
             </nav>
 
             {/* CTA Button */}
@@ -227,7 +227,7 @@ export function GlobalHeader() {
                   >
                     Careers
                   </a>
-                  <div className="px-3 py-2">
+                  {/* <div className="px-3 py-2">
                     <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Resources</div>
                     {resourceLinks.map((link) => (
                       <a
@@ -239,7 +239,7 @@ export function GlobalHeader() {
                         {link.name}
                       </a>
                     ))}
-                  </div>
+                  </div> */}
                   <button
                     onClick={() => {
                       setMobileMenuOpen(false);

@@ -252,33 +252,33 @@ export default function App() {
     if (path === '/case-studies/lakehouse-modernization') {
       return <LakehouseModernization />;
     }
-    if (path === '/case-studies/api-development-hdfc-icici') {
-      return <APIDevelopmentHDFCICICI />;
-    }
-    if (path === '/case-studies/mobile-app-facelift') {
-      return <MobileAppFacelift />;
-    }
-    if (path === '/case-studies/devsecops-implementation') {
-      return <DevSecOpsImplementation />;
-    }
-    if (path === '/case-studies/data-modernisation') {
-      return <DataModernisation />;
-    }
-    if (path === '/case-studies/api-modernisation') {
-      return <APIModernisation />;
-    }
-    if (path === '/case-studies/devsecops-sfdc') {
-      return <DevSecOpsSFDC />;
-    }
-    if (path === '/case-studies/ibm-ace-middleware') {
-      return <IBMACEMiddleware />;
-    }
-    if (path === '/case-studies/datalakehouse') {
-      return <Datalakehouse />;
-    }
-    if (path === '/case-studies/data-observability-ai') {
-      return <DataObservabilityAI />;
-    }
+    // if (path === '/case-studies/api-development-hdfc-icici') {
+    //   return <APIDevelopmentHDFCICICI />;
+    // }
+    // if (path === '/case-studies/mobile-app-facelift') {
+    //   return <MobileAppFacelift />;
+    // }
+    // if (path === '/case-studies/devsecops-implementation') {
+    //   return <DevSecOpsImplementation />;
+    // }
+    // if (path === '/case-studies/data-modernisation') {
+    //   return <DataModernisation />;
+    // }
+    // if (path === '/case-studies/api-modernisation') {
+    //   return <APIModernisation />;
+    // }
+    // if (path === '/case-studies/devsecops-sfdc') {
+    //   return <DevSecOpsSFDC />;
+    // }
+    // if (path === '/case-studies/ibm-ace-middleware') {
+    //   return <IBMACEMiddleware />;
+    // }
+    // if (path === '/case-studies/datalakehouse') {
+    //   return <Datalakehouse />;
+    // }
+    // if (path === '/case-studies/data-observability-ai') {
+    //   return <DataObservabilityAI />;
+    // }
 
     // Default to home
     return <HomePage />;
