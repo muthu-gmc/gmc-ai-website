@@ -82,7 +82,7 @@ export function GlobalFooter() {
                 <Twitter className="w-4 h-4" />
               </a>
               <a
-                href="mailto:info@greenmenconsulting.com"
+                href="mailto:info@greenmenconsulting.ai"
                 className="w-9 h-9 rounded-lg bg-gray-100 hover:bg-gray-900 hover:text-white flex items-center justify-center transition-all"
               >
                 <Mail className="w-4 h-4" />
@@ -143,10 +143,10 @@ export function GlobalFooter() {
             <ul className="space-y-3 mb-6">
               <li>
                 <a
-                  href="mailto:info@greenmenconsulting.com"
+                  href="mailto:info@greenmenconsulting.ai"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  info@greenmenconsulting.com
+                  info@greenmenconsulting.ai
                 </a>
               </li>
               <li>
