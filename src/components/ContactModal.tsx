@@ -92,10 +92,10 @@
 //                 <p className="text-sm text-gray-600">
 //                   Prefer email?{" "}
 //                   <a
-//                     href="mailto:info@greenmenconsulting.com"
+//                     href="mailto:info@greenmenconsulting.ai"
 //                     className="text-[#00F000] hover:text-[#00F000]/80 transition-colors font-medium"
 //                   >
-//                     info@greenmenconsulting.com
+//                     info@greenmenconsulting.ai
 //                   </a>
 //                 </p>
 //               </div>
@@ -196,10 +196,10 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 <p className="text-sm text-gray-600">
                   Prefer email?{" "}
                   <a
-                    href="mailto:info@greenmenconsulting.com"
+                    href="mailto:info@greenmenconsulting.ai"
                     className="text-[#00F000] hover:text-[#00F000]/80 transition-colors font-medium"
                   >
-                    info@greenmenconsulting.com
+                    info@greenmenconsulting.ai
                   </a>
                 </p>
               </div>

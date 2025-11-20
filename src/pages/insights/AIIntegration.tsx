@@ -1,8 +1,13 @@
 import { motion } from "motion/react";
 import { ChevronRight, Database, Cpu, Target, Users, TrendingUp, Shield, Zap, CheckCircle2 } from "lucide-react";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
+import { useState } from "react";
+import { ContactModal } from "../../components/ContactModal";
+
 
 export function AIIntegration() {
+  const [contactModalOpen, setContactModalOpen] = useState(false);
+
   return (
     <div className="mt-16">
       {/* Breadcrumbs */}
@@ -323,11 +328,18 @@ export function AIIntegration() {
             className="inline-block px-8 py-3 bg-[#00F000] text-[#111111] rounded-sm hover:bg-[#00F000]/90 transition-all duration-300"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
+            onClick={() => {
+              setContactModalOpen(true);
+            }}
           >
             Contact Us
           </motion.a>
         </div>
       </section>
+      <ContactModal
+        isOpen={contactModalOpen}
+        onClose={() => setContactModalOpen(false)}
+      />
     </div>
   );
 }
