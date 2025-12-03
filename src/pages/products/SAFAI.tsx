@@ -1,8 +1,9 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import { ChevronRight, MessageSquare, Network, Lightbulb, TrendingUp, Clock, TrendingDown, Target, Link, Bell, Check, User, ArrowRight } from "lucide-react";
 import comparisonImage from "figma:asset/ae06f7468ab722377f7094ff5d9ab3ad8e3a1196.png";
 import timeBackImage from "figma:asset/16ee014dabfcb5d15debd5f9a7b9f6a749c4c483.png";
-import ctaFormImage from "figma:asset/150b8ead2a07e3e393770290be25d4ce4db4c56a.png";
+// import ctaFormImage from "figma:asset/150b8ead2a07e3e393770290be25d4ce4db4c56a.png";
 
 const topFeatures = [
   {
@@ -79,7 +80,45 @@ const pillars = [
   },
 ];
 
+
+
 export function SAFAI() {
+
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitting(true);
+
+    const formData = new FormData();
+    formData.append("entry.1444566559", fullName);
+    formData.append("entry.1789569696", email);
+    formData.append("entry.1586949769", message);
+
+    try {
+      await fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLSd0BYDuEunZK3KUOLY3NMHG-ctO9MycvKcjd75uPpUjNLengA/formResponse",
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: formData,
+        }
+      );
+
+      setSuccess(true);
+      setFullName("");
+      setEmail("");
+      setMessage("");
+    } catch (err) {
+      console.error(err);
+    }
+
+    setSubmitting(false);
+  };
+
   return (
     <div className="mt-16">
       {/* Breadcrumbs */}
@@ -110,7 +149,7 @@ export function SAFAI() {
           >
             Enterprise DataOps Platform
           </motion.div>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -119,7 +158,7 @@ export function SAFAI() {
           >
             AI-Powered Analytics
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -205,7 +244,7 @@ export function SAFAI() {
                 <p className="text-[#111111] mb-4">
                   I found a 15% drop in renewals. This strongly correlates (85%) with customers in the 'Pro Tier' who experienced {'>'}2 high-priority support tickets 90 days before renewal.
                 </p>
-                
+
                 <div className="bg-gray-50 rounded-lg p-4 mb-4">
                   <p className="text-sm text-gray-700">
                     <span className="font-medium">Regional:</span> Concentrated in EMEA (72%)
@@ -250,7 +289,7 @@ export function SAFAI() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <motion.a
-                  href="#contact"
+                  href="#RequestDemo"
                   className="px-8 py-3 bg-[#00F000] text-[#111111] rounded-sm hover:bg-[#00F000]/90 transition-all duration-300"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -446,9 +485,9 @@ export function SAFAI() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <img 
-              src={comparisonImage} 
-              alt="SAF Platform vs Traditional Tools Comparison" 
+            <img
+              src={comparisonImage}
+              alt="SAF Platform vs Traditional Tools Comparison"
               className="w-full h-auto rounded-xl shadow-lg border-2 border-[#00F000] shadow-[0_0_30px_rgba(0,240,0,0.3)]"
             />
           </motion.div>
@@ -477,9 +516,9 @@ export function SAFAI() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <img 
-              src={timeBackImage} 
-              alt="Works with your entire stack - Snowflake, Databricks, Atlan, Jira, Slack, dbt" 
+            <img
+              src={timeBackImage}
+              alt="Works with your entire stack - Snowflake, Databricks, Atlan, Jira, Slack, dbt"
               className="w-full h-auto"
             />
           </motion.div>
@@ -487,20 +526,89 @@ export function SAFAI() {
       </section>
 
       {/* Stop Drowning - Demo Form */}
-      <section className="py-20 px-6 bg-gradient-to-br from-[#00F000] to-green-600">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+      <section id="RequestDemo" className="py-20 px-6 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="text-4xl font-bold text-[#111111] mb-4"
           >
-            <img 
-              src={ctaFormImage} 
-              alt="Stop Drowning in Data Incidents - Request a Demo" 
-              className="w-full h-auto"
-            />
-          </motion.div>
+            Stop Drowning in Data Incidents
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-lg text-gray-700 max-w-2xl mx-auto mb-8"
+          >
+            Power the future of your AI with data you can actually trust. Move from
+            3-day firefights to 30-minute fixes.
+          </motion.p>
+
+          {success ? (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              className="bg-green-50 border border-green-200 text-green-800 rounded-lg p-6 max-w-xl mx-auto"
+            >
+              <div className="flex items-center justify-center gap-2 text-lg">
+                <Check className="w-5 h-5" />
+                Your demo request has been submitted!
+              </div>
+            </motion.div>
+          ) : (
+            <motion.form
+              onSubmit={handleSubmit}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="grid gap-4 max-w-xl mx-auto"
+            >
+              <input
+                type="text"
+                required
+                placeholder="Full Name"
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+                className="border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#00F000] w-full"
+              />
+
+              <input
+                type="email"
+                required
+                placeholder="Work Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#00F000] w-full"
+              />
+
+              <input
+                type="text"
+                required
+                placeholder="Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#00F000] w-full"
+              />
+
+              <button
+                type="submit"
+                disabled={submitting}
+                className="bg-[#00F000] text-[#111111] py-3 rounded-lg font-medium hover:bg-[#00F000]/80 transition disabled:opacity-50"
+              >
+                {submitting ? "Submitting..." : "Request a Demo"}
+              </button>
+            </motion.form>
+          )}
+
+          <p className="text-sm text-gray-500 mt-6">
+            Your data never leaves your environment. SOC 2 compliant.
+          </p>
         </div>
       </section>
 
@@ -517,14 +625,14 @@ export function SAFAI() {
             <p className="text-white/80 mb-8">
               Discover how SAF AI can help you achieve data reliability and quality at scale.
             </p>
-            <motion.a
+            {/* <motion.a
               href="#contact"
               className="inline-block px-8 py-3 bg-[#00F000] text-[#111111] rounded-sm hover:bg-[#00F000]/90 transition-all duration-300"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               Request a Demo
-            </motion.a>
+            </motion.a> */}
           </motion.div>
         </div>
       </section>
