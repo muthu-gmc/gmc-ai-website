@@ -151,10 +151,10 @@ export function GlobalFooter() {
               </li>
               <li>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:043126417157"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  +1 (234) 567-890
+                  0431-26417157
                 </a>
               </li>
             </ul>
